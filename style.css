@@ -1,0 +1,107 @@
+/********************************
+            
+            mobile
+
+********************************/
+
+/******       header      ******/
+/* header */
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+/* logo */
+body > header a img {
+    display: block;
+    height: 30px;
+}
+body > header a p {
+    display: none;
+}
+/* navIcon */
+#navMenu {
+    width: 40px;
+}
+#navMenu:after, 
+#navMenu:before, 
+#navMenu div {
+    background-color: black;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 4px;
+    transition: all .2s ease-in-out;
+}
+#navMenu div {
+    margin: 8px 0;
+}
+#navMenu.clicked:before {
+    transform: translateY(12px) rotate(135deg);
+}
+#navMenu.clicked:after {
+    transform: translateY(-12px) rotate(-135deg);
+}
+#navMenu.clicked div {
+    transform: scale(0);
+}
+/* navMenu */
+#navMenu nav {
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    right: 0;
+    top: 70px;
+    background-color: white;
+    transform: translateX(100%);
+}
+#navMenu.clicked nav {
+    transform: translateX(0);
+}
+#navMenu nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#navMenu nav ul li a {
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+/******       page      ******/
+
+body > main section > div {
+    height: 80vh;
+    width: 100%;
+    background-image: url("img/mobile.jpg");
+    background-size: cover;
+    background-position: right center;
+}
+body > main section > div h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 30vh;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 300;
+}
+body > main section article {
+    padding: 20px;
+}
+body > main section h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+body > main section p {
+    text-align: justify;
+}
