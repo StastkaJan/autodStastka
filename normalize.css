@@ -7,6 +7,8 @@
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 12pt;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 a {
     text-decoration: none;
@@ -14,4 +16,28 @@ a {
 }
 ul {
     list-style: none;
+}
+img {
+    width: 100%;
+}
+.elementor-button.elementor-size-sm {
+    color: white;
+    background-color: green;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    border-radius: 0;
+}
+article {
+    padding: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .elementor-button.elementor-size-sm {
+        background-color: grey;
+    }
+    .elementor-button.elementor-size-sm:hover,
+    .elementor-button.elementor-size-sm:focus {
+        background-color: green;
+    }
 }

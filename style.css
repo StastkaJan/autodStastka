@@ -1,27 +1,28 @@
-/********************************
+/**********************************\
             
-            mobile
+                mobile
 
-********************************/
+\**********************************/
 
 /******       header      ******/
 /* header */
 body > header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     z-index: 10;
+    background-color: white;
 }
 /* logo */
-body > header a img {
-    display: block;
-    height: 30px;
+#clickAction img {
+    width: 50px;
+    height: 50px;
 }
 body > header a p {
     display: none;
@@ -29,19 +30,20 @@ body > header a p {
 /* navIcon */
 #navMenu {
     width: 40px;
+    margin-right: 10px;
+    z-index: 100;
+}
+#navMenu div {
+    margin: 8px 0;
 }
 #navMenu:after, 
 #navMenu:before, 
 #navMenu div {
     background-color: black;
-    border-radius: 3px;
     content: '';
     display: block;
     height: 4px;
     transition: all .2s ease-in-out;
-}
-#navMenu div {
-    margin: 8px 0;
 }
 #navMenu.clicked:before {
     transform: translateY(12px) rotate(135deg);
@@ -58,9 +60,10 @@ body > header a p {
     height: fit-content;
     width: fit-content;
     right: 0;
-    top: 70px;
+    top: 0;
     background-color: white;
     transform: translateX(100%);
+    transition: all .5s ease-in-out;
 }
 #navMenu.clicked nav {
     transform: translateX(0);
@@ -68,28 +71,72 @@ body > header a p {
 #navMenu nav ul {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 100px;
 }
 #navMenu nav ul li a {
     padding: 10px;
     width: 100%;
+    height: 100%;
     display: inline-block;
     text-align: center;
+    color: black;
+    font-size: 2.5rem;
+    transition: ease .5s;
+}
+#navMenu nav ul li a:hover,
+#navMenu nav ul li a:focus {
+    color: green;
+}
+
+
+/***            Min 500             ***/
+
+
+@media only screen and (min-width: 500px) {
+    
+
+    /**     header      **/
+
+    /* navMenu */
+    #navMenu nav {
+        transform: translateX(0);
+    }
+    #navMenu nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        width: unset;
+        height: 74px;
+        padding: 0;
+    }
+    #navMenu nav ul li a {
+        font-size: 1.5rem;
+        color: #404040;
+    }
+    #navMenu:after, 
+    #navMenu:before, 
+    #navMenu div {
+        display: none;
+    }
 }
 
 /******       page      ******/
 
-body > main section > div {
+body main section.firstPage > div {
     height: 80vh;
     width: 100%;
     background-image: url("img/mobile.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: right center;
 }
-body > main section > div h1 {
+body main section.firstPage > div h1 {
     width: 100%;
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 25vh;
     font-size: 2.4rem;
     color: white;
     font-weight: 300;

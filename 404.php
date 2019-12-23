@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-	<main>
+	<main role="main">
 		<section>
 
-			<article id="error404">
+			<article id="post-404">
 
-				<h1><?php _e('Stránka nenalezena'); ?></h1>
+				<h1><?php _e( 'Stránka nenalezena', '' ); ?></h1>
 				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e('Vrátit na úvodní stránku?'); ?></a>
+					<a href="<?php echo home_url(); ?>"><?php _e( 'Úvodní stránka', '' ); ?></a>
 				</h2>
 
 			</article>
