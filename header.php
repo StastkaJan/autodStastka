@@ -15,7 +15,7 @@
 		<?php wp_head(); ?>
 
 	</head>
-	<body <?php body_class(); ?>>
+	<body>
 
 			<header id="clickAction" class="header clear" role="banner">
 

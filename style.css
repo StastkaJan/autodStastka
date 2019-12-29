@@ -116,7 +116,7 @@ body > header.nonTop a:focus p {
 /******       page      ******/
 
 body main section.firstPage > div {
-    height: 90vh;
+    height: 60vh;
     width: 100%;
     background-image: url("img/bg.jpg");
     background-size: cover;
@@ -126,24 +126,43 @@ body main section.firstPage > div {
 body main section.firstPage > div h1 {
     width: 100%;
     text-align: center;
-    padding-top: 25vh;
+    padding-top: 15vh;
     font-size: 2.4rem;
     color: white;
     font-weight: 300;
 }
-body > main section article {
-    padding: 20px;
+
+/******       front-page      ******/
+
+body main section.firstPage.frontPage > div {
+    height: 80vh;
 }
-body > main section h2 {
-    text-align: center;
-    padding-bottom: 10px;
-    margin-top: 30px;
-}
-body > main section p {
-    text-align: justify;
+body main section.firstPage.frontPage > div h1 {
+    padding-top: 25vh;
 }
 
-/******       page      ******/
+/******       front-page      ******/
+
+body main section.firstPage.error > div {
+    height: 95vh;
+}
+body main section.firstPage.error > div h1 {
+    padding-top: 25vh;
+}
+body main section.firstPage.error > div a {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    padding: 20px;
+    background-color: green;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60vh;
+    transition: ease .5s;
+    text-align: center;
+}
+
+/******       footer      ******/
 
 footer {
     background-color: green;
@@ -219,5 +238,15 @@ footer a {
     /* navMenu */
     body > header a p {
         display: inline-block;
+    }
+
+    /******       front-page      ******/
+
+    body main section.firstPage.error > div a {
+        background-color: #636363;
+    }
+    body main section.firstPage.error > div a:hover,
+    body main section.firstPage.error > div a:focus {
+        background-color: green;
     }
 }

@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<section class="firstPage">
+		<section class="firstPage frontPage">
 
 			<div>
 
 				<h1>Auta s rukou a jeřáby Šťástka</h1>
-				
+
 			</div>
 
 		</section>
