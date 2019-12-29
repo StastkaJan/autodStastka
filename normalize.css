@@ -13,6 +13,7 @@ html {
 a {
     text-decoration: none;
     color: black;
+    display: block;
 }
 ul {
     list-style: none;
@@ -20,24 +21,6 @@ ul {
 img {
     width: 100%;
 }
-.elementor-button.elementor-size-sm {
-    color: white;
-    background-color: green;
-    text-align: center;
-    transition: all .2s ease-in-out;
-    border-radius: 0;
-}
 article {
     padding: 10px;
-}
-
-@media only screen and (min-width: 1200px) {
-    
-    .elementor-button.elementor-size-sm {
-        background-color: grey;
-    }
-    .elementor-button.elementor-size-sm:hover,
-    .elementor-button.elementor-size-sm:focus {
-        background-color: green;
-    }
 }

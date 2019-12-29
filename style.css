@@ -1,13 +1,9 @@
-/**********************************\
-            
-                mobile
-
-\**********************************/
 
 /******       header      ******/
+
 /* header */
 body > header {
-    position: sticky;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -17,7 +13,13 @@ body > header {
     align-items: center;
     justify-content: space-between;
     z-index: 10;
+}
+body > header.nonTop {
+    position: fixed;
     background-color: white;
+    box-shadow: 0px 5px 5px #27272780;
+    -webkit-box-shadow: 0px 5px 5px #27272780;
+    -moz-box-shadow: 0px 5px 5px #27272780;
 }
 /* logo */
 #clickAction img {
@@ -26,6 +28,13 @@ body > header {
 }
 body > header a p {
     display: none;
+    color: white;
+    font-size: 2rem;
+    transform: translateY(-10px);
+    margin-left: 10px;
+}
+body > header.nonTop a p {
+    color: black;
 }
 /* navIcon */
 #navMenu {
@@ -39,11 +48,19 @@ body > header a p {
 #navMenu:after, 
 #navMenu:before, 
 #navMenu div {
-    background-color: black;
+    background-color: white;
     content: '';
     display: block;
     height: 4px;
     transition: all .2s ease-in-out;
+}
+#navMenu.clicked:after, 
+#navMenu.clicked:before, 
+#navMenu.clicked div,
+.nonTop #navMenu:after, 
+.nonTop #navMenu:before, 
+.nonTop #navMenu div {
+    background-color: black;
 }
 #navMenu.clicked:before {
     transform: translateY(12px) rotate(135deg);
@@ -61,7 +78,6 @@ body > header a p {
     width: fit-content;
     right: 0;
     top: 0;
-    background-color: white;
     transform: translateX(100%);
     transition: all .5s ease-in-out;
 }
@@ -74,6 +90,7 @@ body > header a p {
     height: 100vh;
     padding: 20px;
     padding-top: 100px;
+    background-color: white;
 }
 #navMenu nav ul li a {
     padding: 10px;
@@ -83,16 +100,71 @@ body > header a p {
     text-align: center;
     color: black;
     font-size: 2.5rem;
-    transition: ease .5s;
 }
 #navMenu nav ul li a:hover,
-#navMenu nav ul li a:focus {
+#navMenu nav ul li a:focus,
+.nonTop #navMenu nav ul li a:hover,
+.nonTop #navMenu nav ul li a:focus,
+body > header a:hover p,
+body > header a:focus p,
+body > header.nonTop a:hover p,
+body > header.nonTop a:focus p {
     color: green;
+    transition: ease .5s;
 }
 
+/******       page      ******/
 
-/***            Min 500             ***/
+body main section.firstPage > div {
+    height: 90vh;
+    width: 100%;
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+body main section.firstPage > div h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 25vh;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 300;
+}
+body > main section article {
+    padding: 20px;
+}
+body > main section h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+body > main section p {
+    text-align: justify;
+}
 
+/******       page      ******/
+
+footer {
+    background-color: green;
+    padding: 20px;
+}
+footer p,
+footer a {
+    color: white;
+}
+footer p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer a {
+    margin-left: .2rem;
+}
+
+/*                    *\
+        Min 500
+\*                    */
 
 @media only screen and (min-width: 500px) {
     
@@ -114,41 +186,38 @@ body > header a p {
     }
     #navMenu nav ul li a {
         font-size: 1.5rem;
-        color: #404040;
+        color: white;
+    }
+    .nonTop #navMenu nav ul li a {
+        color: black;
     }
     #navMenu:after, 
     #navMenu:before, 
     #navMenu div {
         display: none;
     }
+
+    /******       page      ******/
+
+    body main section.firstPage > div {
+        background-position: center center;
+    }
+    body main section.firstPage > div h1 {
+        font-size: 3rem;
+    }
 }
 
-/******       page      ******/
+/*                    *\
+        Min 1000
+\*                    */
 
-body main section.firstPage > div {
-    height: 80vh;
-    width: 100%;
-    background-image: url("img/mobile.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center;
-}
-body main section.firstPage > div h1 {
-    width: 100%;
-    text-align: center;
-    padding-top: 25vh;
-    font-size: 2.4rem;
-    color: white;
-    font-weight: 300;
-}
-body > main section article {
-    padding: 20px;
-}
-body > main section h2 {
-    text-align: center;
-    padding-bottom: 10px;
-    margin-top: 30px;
-}
-body > main section p {
-    text-align: justify;
+@media only screen and (min-width: 1000px) {
+    
+
+    /**     header      **/
+
+    /* navMenu */
+    body > header a p {
+        display: inline-block;
+    }
 }
