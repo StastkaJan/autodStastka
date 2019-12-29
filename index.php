@@ -4,7 +4,7 @@
 
 		<section>
 
-			<h1><?php _e( 'Latest Posts', '' ); ?></h1>
+			<h1><?php _e( 'nejnovější posty', '' ); ?></h1>
 
 		</section>
 
