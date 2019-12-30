@@ -7,6 +7,9 @@
 
 				<h1>Auta s rukou a jeřáby Šťástka</h1>
 
+				<a href="#kontakt">Kontaktovat</a>
+				<a href="#reference">Reference</a>
+
 			</div>
 
 		</section>
