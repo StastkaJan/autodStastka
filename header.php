@@ -1,7 +1,15 @@
 <!doctype html>
 <html lang="cs">
 	<head>
-		<meta name="google-site-verification" content="uWtsUkZfQGphLsXQ9nPCalxKGjgk0ei5qH3J-Wezl2A" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155272703-1"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+  			gtag('config', 'UA-155272703-1');
+		</script>
+		
 		<meta charset="utf-8">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
