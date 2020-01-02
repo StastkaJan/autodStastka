@@ -22,7 +22,7 @@
 
 				<div class="logo">
 					<a href="<?php echo home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/scaniaLogo.svg" alt="logo" />
+						<img src="<?php echo get_template_directory_uri(); ?>/img/scaniaLogo.png" alt="logo" />
 						<p><?php bloginfo('name'); ?></p>
 					</a>
 				</div>
