@@ -193,6 +193,9 @@ footer a {
     #navMenu nav {
         top: 0;
     }
+    #navMenu.clicked nav {
+        transform: translateY(0);
+    }
     #navMenu nav ul {
         flex-direction: row;
         align-items: center;
