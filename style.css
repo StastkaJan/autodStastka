@@ -77,12 +77,11 @@ body > header.nonTop a p {
     height: fit-content;
     width: fit-content;
     right: 0;
-    top: 0;
-    transform: translateX(100%);
+    top: -100vh;
     transition: all .5s ease-in-out;
 }
 #navMenu.clicked nav {
-    transform: translateX(0);
+    transform: translateY(100%);
 }
 #navMenu nav ul {
     display: flex;
@@ -192,7 +191,7 @@ footer a {
 
     /* navMenu */
     #navMenu nav {
-        transform: translateX(0);
+        top: 0;
     }
     #navMenu nav ul {
         flex-direction: row;
