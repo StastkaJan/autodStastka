@@ -134,13 +134,13 @@ body main section.firstPage > div h1 {
 /******       front-page      ******/
 
 body main section.firstPage.frontPage > div {
-    height: 80vh;
+    height: 100vh;
 }
 body main section.firstPage.frontPage > div h1 {
-    padding-top: 25vh;
+    padding-top: 20vh;
 }
 
-/******       front-page      ******/
+/******       error404      ******/
 
 body main section.firstPage.error > div {
     height: 95vh;
