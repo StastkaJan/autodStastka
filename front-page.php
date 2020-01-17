@@ -5,7 +5,7 @@
 
 			<div>
 
-				<h1>Auta s rukou a jeřáby Šťástka</h1>
+				<h1><?php the_title(); ?></h1>
 
 			</div>
 

@@ -1,7 +1,7 @@
 <?php
 
 /*------------------------------------*\
-	Theme Support
+				Theme Support
 \*------------------------------------*/
 
 if (!isset($content_width))
@@ -22,7 +22,7 @@ if (function_exists('add_theme_support'))
 }
 
 /*------------------------------------*\
-	Functions
+				Functions
 \*------------------------------------*/
 
 function menu_nav()
