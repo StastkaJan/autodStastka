@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JSWeb Theme\n"
+"POT-Creation-Date: 2020-01-31 14:18+0100\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Language: cs_CZ\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: ../404.php:7
+msgid "Page not found"
+msgstr "Stránka nenalezena"
+
+#: ../404.php:10
+msgid "It might have been removed, renamed, or did not exist in the first place."
+msgstr "Byla odstraněna, přejmenována, nebo nikdy neexistovala."
+
+#: ../404.php:13
+msgid "Home page"
+msgstr "Domovská stránka"
+
+#: ../single.php:21
+msgid "Published by"
+msgstr "Publikováno uživatelem"
+
+#: ../single.php:22
+msgid "Leave your thoughts"
+msgstr "Zanechte svůj názor"
+
+#: ../single.php:22
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: ../single.php:22
+msgid "% Comments"
+msgstr "% komentářů"
+
+#: ../page.php:28 ../single.php:44
+msgid "Sorry, nothing to display."
+msgstr "Omlouváme se, není nic k zorazení."
+
+#: ../comments.php:3
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr "Příspěvek je zabezpečen heslem. Vložte heslo aby jste mohli zobrazit komentáře."
+
+#: ../comments.php:18
+msgid "Comments are closed here."
+msgstr "Komentáře jsou uzavřené."
+
+#: ../footer.php:5
+msgid " | Theme by"
+msgstr " | Šablonu vytvořil"
+
+#: ../functions.php:87
+msgid "Widget Area 1"
+msgstr "Místo pro widget 1"
+
+#: ../functions.php:96
+msgid "Widget Area 2"
+msgstr "Místo pro widget 2"
+
+#: ../functions.php:126
+msgid "Header Menu"
+msgstr "Menu v záhlaví"
+
+#: ../functions.php:127
+msgid "Mobile Menu"
+msgstr "Mobilní menu"
+
+#: ../functions.php:128
+msgid "Footer Menu"
+msgstr "Menu v zápatí"
+
+#: ../functions.php:129
+msgid "Sidebar Menu"
+msgstr "Menu v postranním panelu"
+
+#: ../index.php:6
+msgid "Latest Posts"
+msgstr "Nejnovější příspěvky"
+
+#: ../search.php:6
+#, php-format
+msgid "%s Search Results for "
+msgstr "%s výsledků hledání pro "
+
+#: ../searchform.php:2
+msgid "To search type and hit enter."
+msgstr "Pro hledání klikněte a pište."
+
+#: ../searchform.php:3
+msgid "Search"
+msgstr "Hledat"
+
+#: ../single.php:26
+msgid "Tags: "
+msgstr "Tagy: "
+
+#: ../single.php:28
+msgid "Categorised in: "
+msgstr "Kategorizováno v: "
+
+#: ../single.php:30
+msgid "This post was written by "
+msgstr "Tento příspěvek napsal uživatel "
+
+#: ../tag.php:6
+msgid "Tag Archive: "
+msgstr "Archiv tagů: "
+
+#~ msgid "%s results for "
+#~ msgstr "%s Ergebnisse fĂĽr "

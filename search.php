@@ -3,7 +3,7 @@
 	<main role="main">
 		<section>
 
-			<h1><?php _e('Latest Posts', 'jsweb'); ?></h1>
+			<h1><?php echo sprintf(__('%s Search Results for ', 'jsweb'), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -20,8 +20,6 @@
 					<span><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
 					<span><?php _e('Published by', 'jsweb'); ?> <?php the_author_posts_link(); ?></span>
 					<span><?php if (comments_open(get_the_ID())) comments_popup_link(__('Leave your thoughts', 'jsweb'), __('1 Comment', 'jsweb'), __('% Comments', 'jsweb')); ?></span>
-
-					<?php excerpt('index'); ?>
 
 					<?php edit_post_link(); ?>
 				</article>

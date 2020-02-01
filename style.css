@@ -1,254 +1,355 @@
+/* ==========================================================================
+   Element Base
+   ========================================================================== */
 
-/******       header      ******/
-
-/* header */
-body > header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
+main {
+	display: block;
 }
-body > header.nonTop {
-    position: fixed;
-    background-color: white;
-    box-shadow: 0px 5px 5px #27272780;
-    -webkit-box-shadow: 0px 5px 5px #27272780;
-    -moz-box-shadow: 0px 5px 5px #27272780;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	line-height: 1.2;
+	margin: 3.5rem 0 2rem;
 }
-/* logo */
-#clickAction img {
-    height: 50px;
-    width: 75px;
+h1 {
+	font-size: 2.5rem;
 }
-body > header a p {
-    display: none;
-    color: white;
-    font-size: 2rem;
-    transform: translateY(-10px);
-    margin-left: 10px;
+h2 {
+	font-size: 2rem;
 }
-body > header.nonTop a p {
-    color: black;
+h3 {
+	font-size: 1.75rem;
 }
-/* navIcon */
-#navMenu {
-    width: 40px;
-    margin-right: 10px;
-    z-index: 100;
+h4 {
+	font-size: 1.5rem;
 }
-#navMenu div {
-    margin: 8px 0;
+h5 {
+	font-size: 1.2rem;
 }
-#navMenu:after, 
-#navMenu:before, 
-#navMenu div {
-    background-color: white;
-    content: '';
-    display: block;
-    height: 4px;
-    transition: all .2s ease-in-out;
+h6 {
+	font-size: 1rem;
+	text-transform: uppercase;
 }
-#navMenu.clicked:after, 
-#navMenu.clicked:before, 
-#navMenu.clicked div,
-.nonTop #navMenu:after, 
-.nonTop #navMenu:before, 
-.nonTop #navMenu div {
-    background-color: black;
+p {
+	line-height: 1.2;
+	margin: 10px;
 }
-#navMenu.clicked:before {
-    transform: translateY(12px) rotate(135deg);
+em,
+i,
+q,
+dfn {
+	font-style: italic;
 }
-#navMenu.clicked:after {
-    transform: translateY(-12px) rotate(-135deg);
+em em,
+em i,
+i em,
+i i,
+cite em,
+cite i {
+	font-weight: bolder;
 }
-#navMenu.clicked div {
-    transform: scale(0);
+big {
+	font-size: 1.2rem;
 }
-/* navMenu */
-#navMenu nav {
-    position: absolute;
-    height: fit-content;
-    width: fit-content;
-    right: 0;
-    top: -100vh;
-    transition: all .5s ease-in-out;
+small {
+	font-size: .75rem;
 }
-#navMenu.clicked nav {
-    transform: translateY(100%);
+b,
+strong {
+	font-weight: 700;
 }
-#navMenu nav ul {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 20px;
-    padding-top: 100px;
-    background-color: white;
+ins {
+	text-decoration: underline;
 }
-#navMenu nav ul li a {
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    font-size: 2.5rem;
+sub,
+sup {
+	font-size: .75rem;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
-#navMenu nav ul li a:hover,
-#navMenu nav ul li a:focus,
-.nonTop #navMenu nav ul li a:hover,
-.nonTop #navMenu nav ul li a:focus,
-body > header a:hover p,
-body > header a:focus p,
-body > header.nonTop a:hover p,
-body > header.nonTop a:focus p {
-    color: green;
-    transition: ease .5s;
+sup {
+	top: -.5rem;
+}
+sub {
+	bottom: -.25rem;
+}
+abbr,
+acronym {
+	cursor: help;
+}
+address {
+	line-height: 1.5;
+	margin: 0 0 2rem 0;
+}
+hr {
+	border-style: solid;
+	border-width: .1rem 0 0 0;
+	border-color: whitesmoke;
+	margin: 4rem 0;
 }
 
-/******       page      ******/
+/* ==========================================================================
+   Lists
+   ========================================================================== */
 
-body main section.firstPage > div {
-    height: 60vh;
-    width: 100%;
-    background-image: url("img/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right bottom;
+dt,
+dd {
+	line-height: 1.5;
 }
-body main section.firstPage > div h1 {
-    width: 100%;
-    text-align: center;
-    padding-top: 15vh;
-    font-size: 2.4rem;
-    color: white;
-    font-weight: 300;
+dt {
+	font-weight: 700;
 }
-
-/******       front-page      ******/
-
-body main section.firstPage.frontPage > div {
-    height: 100vh;
+dt + dd {
+	margin-top: .5rem;
 }
-body main section.firstPage.frontPage > div h1 {
-    padding-top: 20vh;
+dd + dt {
+	margin-top: 1.5rem;
 }
 
-/******       error404      ******/
+/* ==========================================================================
+   Code
+   ========================================================================== */
 
-body main section.firstPage.error > div {
-    height: 95vh;
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace;
+	font-size: .9rem;
+	padding: .4rem .6rem;
 }
-body main section.firstPage.error > div h1 {
-    padding-top: 25vh;
+code,
+kbd,
+samp {
+	background: rgba(0, 0, 0, .075);
+	border-radius: .2rem;
 }
-body main section.firstPage.error > div a {
-    position: absolute;
-    font-size: 2rem;
-    color: white;
-    padding: 20px;
-    background-color: green;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 60vh;
-    transition: ease .5s;
-    text-align: center;
+pre {
+	border: .1rem solid whitesmoke;
+	line-height: 1.5;
+	margin: 4rem 0;
+	overflow: auto;
+	padding: 3rem 2rem;
+	text-align: left;
+}
+pre code {
+	background: transparent;
+	padding: 0;
 }
 
-/******       footer      ******/
+/* ==========================================================================
+   Tables
+   ========================================================================== */
 
-footer {
-    background-color: green;
-    padding: 20px;
+table {
+	border: .1rem solid whitesmoke;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	font-size: 1.6rem;
+	margin: 4rem 0;
+	max-width: 100%;
+	overflow: hidden;
+	width: 100%;
 }
-footer p,
-footer a {
-    color: white;
+th,
+td {
+	border: .1rem solid whitesmoke;
+	line-height: 1.4;
+	margin: 0;
+	overflow: visible;
+	padding: .5em;
 }
+caption {
+	background: whitesmoke;
+	font-weight: 600;
+	padding: .5em;
+	text-align: center;
+}
+thead {
+	vertical-align: bottom;
+	white-space: nowrap;
+}
+th {
+	font-weight: 700;
+}
+
+/* ==========================================================================
+   Opacity
+   ========================================================================== */
+
+.opacity-0 {
+	opacity: 0;
+}
+.opacity-5 {
+	opacity: .05;
+}
+.opacity-10 {
+	opacity: .1;
+}
+.opacity-15 {
+	opacity: .15;
+}
+.opacity-20 {
+	opacity: .2;
+}
+.opacity-25 {
+	opacity: .25;
+}
+.opacity-30 {
+	opacity: .3;
+}
+.opacity-35 {
+	opacity: .35;
+}
+.opacity-40 {
+	opacity: .4;
+}
+.opacity-45 {
+	opacity: .45;
+}
+.opacity-50 {
+	opacity: .5;
+}
+.opacity-55 {
+	opacity: .55;
+}
+.opacity-60 {
+	opacity: .6;
+}
+.opacity-65 {
+	opacity: .65;
+}
+.opacity-70 {
+	opacity: .7;
+}
+.opacity-75 {
+	opacity: .75;
+}
+.opacity-80 {
+	opacity: .8;
+}
+.opacity-85 {
+	opacity: .85;
+}
+.opacity-90 {
+	opacity: .9;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+	background: #fff;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0px 4px 8px #969696;
+	-webkit-box-shadow: 0px 4px 8px #969696;
+	-moz-box-shadow: 0px 4px 8px #969696;
+	z-index: 10;
+}
+header div.logo {
+	display: flex;
+	align-items: center;
+}
+header div.logo a:nth-last-of-type(2) {
+	padding: 0;
+}
+header img {
+	height: 50px;
+	width: 75px;
+}
+header div.logo p {
+	font-size: 1.3rem;
+	display: none; /* while mobile */
+}
+header ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+}
+header ul li {
+	margin: 0;
+}
+header > nav {
+	height: 100%;
+	margin-right: 20px;
+	display: none; /* while mobile */
+}
+header .mobile svg {
+	width: 50px;
+	height: 50px;
+}
+header div.mobile {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: -100vh;
+	height: 100%;
+	padding: 20px;
+	background-color: white;
+	transition: .5s ease-in-out;
+}
+header div.mobile.clicked {
+	top: 0;
+}
+header div.mobile button {
+	margin-left: 85%;
+}
+header div.mobile ul {
+	flex-direction: column;
+	font-size: 1.2rem;
+	margin-top: 30px;
+}
+header div.mobile ul li {
+	padding: 10px;
+	margin: 0 0 5px 10px;
+	border-top: 1px solid;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
 footer p {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-footer a {
-    margin-left: .2rem;
-}
-
-/*                    *\
-        Min 500
-\*                    */
-
-@media only screen and (min-width: 500px) {
-    
-
-    /**     header      **/
-
-    /* navMenu */
-    #navMenu nav {
-        top: 0;
-    }
-    #navMenu.clicked nav {
-        transform: translateY(0);
-    }
-    #navMenu nav ul {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        width: unset;
-        height: 74px;
-        padding: 0;
-    }
-    #navMenu nav ul li a {
-        font-size: 1.5rem;
-        color: white;
-    }
-    .nonTop #navMenu nav ul li a {
-        color: black;
-    }
-    #navMenu:after, 
-    #navMenu:before, 
-    #navMenu div {
-        display: none;
-    }
-
-    /******       page      ******/
-
-    body main section.firstPage > div {
-        background-position: center center;
-    }
-    body main section.firstPage > div h1 {
-        font-size: 3rem;
-    }
+footer p a {
+	margin: 0 5px;
+	padding: 0;
 }
 
-/*                    *\
-        Min 1000
-\*                    */
+/* ==========================================================================
+   Error page
+   ========================================================================== */
 
-@media only screen and (min-width: 1000px) {
-    
+main.error {
+	min-height: 80vh;
+}
+main.error a {
+	padding: 20px;
+	font-size: 1.5rem;
+}
 
-    /**     header      **/
-
-    /* navMenu */
-    body > header a p {
-        display: inline-block;
-    }
-
-    /******       front-page      ******/
-
-    body main section.firstPage.error > div a {
-        background-color: #636363;
-    }
-    body main section.firstPage.error > div a:hover,
-    body main section.firstPage.error > div a:focus {
-        background-color: green;
-    }
+@media only screen and (min-width: 800px) {
+	header div.logo p,
+	header > nav {
+		display: unset;
+	}
+	.mobile {
+		display: none;
+	}
 }
