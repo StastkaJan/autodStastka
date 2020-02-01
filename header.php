@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
 
@@ -43,12 +43,16 @@
 				</button>
 				<!-- The real mobile menu -->
 				<nav role="navigation">
-					<?php nav_menu(); ?>
+					<?php if (function_exists('header_menu')) {
+						 header_menu();
+					}; ?>	
 				</nav>
 			</div>
 
 			<!-- Desktop menu -->
 			<nav role="navigation">
-				<?php nav_menu(); ?>
+				<?php if (function_exists('header_menu')) {
+					 header_menu();
+				}; ?>			
 			</nav>
 		</header>

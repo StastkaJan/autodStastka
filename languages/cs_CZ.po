@@ -23,26 +23,6 @@ msgstr "Byla odstraněna, přejmenována, nebo nikdy neexistovala."
 msgid "Home page"
 msgstr "Domovská stránka"
 
-#: ../single.php:21
-msgid "Published by"
-msgstr "Publikováno uživatelem"
-
-#: ../single.php:22
-msgid "Leave your thoughts"
-msgstr "Zanechte svůj názor"
-
-#: ../single.php:22
-msgid "1 Comment"
-msgstr "1 komentář"
-
-#: ../single.php:22
-msgid "% Comments"
-msgstr "% komentářů"
-
-#: ../page.php:28 ../single.php:44
-msgid "Sorry, nothing to display."
-msgstr "Omlouváme se, není nic k zorazení."
-
 #: ../comments.php:3
 msgid "Post is password protected. Enter the password to view any comments."
 msgstr "Příspěvek je zabezpečen heslem. Vložte heslo aby jste mohli zobrazit komentáře."
@@ -56,61 +36,52 @@ msgid " | Theme by"
 msgstr " | Šablonu vytvořil"
 
 #: ../functions.php:87
-msgid "Widget Area 1"
-msgstr "Místo pro widget 1"
+msgid "Primary sidebar"
+msgstr "Primární vedlejší panel"
 
-#: ../functions.php:96
-msgid "Widget Area 2"
-msgstr "Místo pro widget 2"
-
-#: ../functions.php:126
+#: ../functions.php:115
 msgid "Header Menu"
 msgstr "Menu v záhlaví"
 
-#: ../functions.php:127
-msgid "Mobile Menu"
-msgstr "Mobilní menu"
-
-#: ../functions.php:128
-msgid "Footer Menu"
-msgstr "Menu v zápatí"
-
-#: ../functions.php:129
-msgid "Sidebar Menu"
-msgstr "Menu v postranním panelu"
+#: ../functions.php:116
+msgid "Extra Menu"
+msgstr "Extra menu"
 
 #: ../index.php:6
 msgid "Latest Posts"
 msgstr "Nejnovější příspěvky"
 
-#: ../search.php:6
-#, php-format
-msgid "%s Search Results for "
-msgstr "%s výsledků hledání pro "
+#: ../index.php:21 ../single.php:19
+msgid "Published by"
+msgstr "Publikováno uživatelem"
 
-#: ../searchform.php:2
-msgid "To search type and hit enter."
-msgstr "Pro hledání klikněte a pište."
+#: ../index.php:22 ../single.php:20
+msgid "Leave your thoughts"
+msgstr "Zanechte svůj názor"
 
-#: ../searchform.php:3
-msgid "Search"
-msgstr "Hledat"
+#: ../index.php:32 ../page.php:26 ../single.php:41
+msgid "Sorry, nothing to display."
+msgstr "Omlouváme se, není nic k zobrazení."
 
-#: ../single.php:26
+#: ../single.php:20
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: ../single.php:20
+msgid "% Comments"
+msgstr "% komentářů"
+
+#: ../single.php:24
 msgid "Tags: "
 msgstr "Tagy: "
 
-#: ../single.php:28
+#: ../single.php:26
 msgid "Categorised in: "
 msgstr "Kategorizováno v: "
 
-#: ../single.php:30
+#: ../single.php:28
 msgid "This post was written by "
 msgstr "Tento příspěvek napsal uživatel "
-
-#: ../tag.php:6
-msgid "Tag Archive: "
-msgstr "Archiv tagů: "
 
 #~ msgid "%s results for "
 #~ msgstr "%s Ergebnisse fĂĽr "

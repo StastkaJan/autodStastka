@@ -82,28 +82,17 @@ if (function_exists('add_theme_support')) {
     load_theme_textdomain('jsweb', get_template_directory() . '/languages');
 }
 
-if (function_exists('register_sidebar')) {
-    register_sidebars(array(
-        'name' => __('Widget Area 1', 'jsweb'),
-        'description' => __('', ''),
-        'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    register_sidebars(array(
-        'name' => __('Widget Area 2', 'jsweb'),
-        'description' => __('', ''),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+function jsweb_register_sidebars() {
+    register_sidebar(array(
+        'name' => __('Primary sidebar', 'jsweb'),
+        'id' => 'primary',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
 }
-add_filter('widget_text', 'do_shortcode');
-add_filter('widget_text', 'shortcode_unautop');
+add_action('widgets_init', 'jsweb_register_sidebars');
 
 /*------------------------------------*\
 				Functions
@@ -123,33 +112,25 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 
 function menus() {
 	register_nav_menus( array(
-		'header'  => __('Header Menu', ''),
-		'mobile'   => __('Mobile Menu', ''),
-		'footer'   => __('Footer Menu', ''), 
-        'sidebar' => __('Sidebar Menu', ''),
+		'header-menu'  => __('Header Menu', 'jsweb'),
+		'extra-menu'   => __('Extra Menu', 'jsweb'),
 	));
 }
 add_action('init', 'menus');
 
-function nav_menu() {
+function header_menu() {
 	wp_nav_menu(
 		array(
 			'container'      => '',
-			'theme_location' => 'header',
+			'theme_location' => 'header-menu',
 			'items_wrap'     => '<ul>%3$s</ul>',
 		)
 	);
 }
 
-function pagination() {
-    global $wp_query;
-    $big = 999999999;
-    echo paginate_links(array(
-        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
-        'format' => '?paged=%#%',
-        'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
-    ));
+function pagination(){
+    global $wp_query; 
+    echo paginate_links();
 }
 
 function index($length)  {

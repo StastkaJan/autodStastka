@@ -180,68 +180,6 @@ th {
 }
 
 /* ==========================================================================
-   Opacity
-   ========================================================================== */
-
-.opacity-0 {
-	opacity: 0;
-}
-.opacity-5 {
-	opacity: .05;
-}
-.opacity-10 {
-	opacity: .1;
-}
-.opacity-15 {
-	opacity: .15;
-}
-.opacity-20 {
-	opacity: .2;
-}
-.opacity-25 {
-	opacity: .25;
-}
-.opacity-30 {
-	opacity: .3;
-}
-.opacity-35 {
-	opacity: .35;
-}
-.opacity-40 {
-	opacity: .4;
-}
-.opacity-45 {
-	opacity: .45;
-}
-.opacity-50 {
-	opacity: .5;
-}
-.opacity-55 {
-	opacity: .55;
-}
-.opacity-60 {
-	opacity: .6;
-}
-.opacity-65 {
-	opacity: .65;
-}
-.opacity-70 {
-	opacity: .7;
-}
-.opacity-75 {
-	opacity: .75;
-}
-.opacity-80 {
-	opacity: .8;
-}
-.opacity-85 {
-	opacity: .85;
-}
-.opacity-90 {
-	opacity: .9;
-}
-
-/* ==========================================================================
    Header
    ========================================================================== */
 
@@ -305,7 +243,16 @@ header div.mobile.clicked {
 	top: 0;
 }
 header div.mobile button {
-	margin-left: 85%;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+header div.mobile button svg {
+	height: 40px;
+	width: 40px;
+}
+header div.mobile nav {
+	margin-top: 70px;
 }
 header div.mobile ul {
 	flex-direction: column;
@@ -313,9 +260,11 @@ header div.mobile ul {
 	margin-top: 30px;
 }
 header div.mobile ul li {
-	padding: 10px;
-	margin: 0 0 5px 10px;
+	margin: 0;
 	border-top: 1px solid;
+}
+header div.mobile ul li a {
+	width: 100%;
 }
 
 /* ==========================================================================
@@ -336,9 +285,6 @@ footer p a {
    Error page
    ========================================================================== */
 
-main.error {
-	min-height: 80vh;
-}
 main.error a {
 	padding: 20px;
 	font-size: 1.5rem;

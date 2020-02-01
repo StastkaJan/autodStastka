@@ -13,8 +13,6 @@
 
 				<?php comments_template('', true); ?>
 
-				<br>
-
 				<?php edit_post_link(); ?>
 
 			</article>

@@ -13,13 +13,13 @@ hgroup,
 main,
 nav,
 section,
-summary,
-a {
+summary {
     display: block;
 }
 audio,
 canvas,
-video {
+video,
+a {
     display: inline-block;
 }
 h1,
@@ -83,6 +83,8 @@ body {
 }
 main {
     padding: 20px;
+    min-height: 80vh;
+    width: 100%;
 }
 a {
     background: transparent;
@@ -293,7 +295,6 @@ legend {
 }
 label {
 	display: block;
-	font-size: 1.6rem;
 	font-weight: 400;
 	margin: 0 0 .5rem 0;
 }
