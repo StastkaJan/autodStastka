@@ -1,9 +1,30 @@
 /* ==========================================================================
-   Element Base
+   CSS reset
    ========================================================================== */
 
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Basic setup
+   ========================================================================== */
+
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+body {
+	min-width: 300px;
+}
 main {
-	display: block;
+	min-height: 80vh;
+	background-color: #fafafa;
 }
 h1,
 h2,
@@ -11,172 +32,36 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 1.2;
-	margin: 3.5rem 0 2rem;
+	padding: 1rem;
 }
 h1 {
-	font-size: 2.5rem;
-}
-h2 {
 	font-size: 2rem;
 }
-h3 {
-	font-size: 1.75rem;
-}
-h4 {
-	font-size: 1.5rem;
-}
-h5 {
-	font-size: 1.2rem;
-}
-h6 {
-	font-size: 1rem;
-	text-transform: uppercase;
-}
 p {
-	line-height: 1.2;
-	margin: 10px;
-}
-em,
-i,
-q,
-dfn {
-	font-style: italic;
-}
-em em,
-em i,
-i em,
-i i,
-cite em,
-cite i {
-	font-weight: bolder;
-}
-big {
-	font-size: 1.2rem;
-}
-small {
-	font-size: .75rem;
-}
-b,
-strong {
-	font-weight: 700;
-}
-ins {
-	text-decoration: underline;
-}
-sub,
-sup {
-	font-size: .75rem;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-sup {
-	top: -.5rem;
-}
-sub {
-	bottom: -.25rem;
-}
-abbr,
-acronym {
-	cursor: help;
-}
-address {
 	line-height: 1.5;
-	margin: 0 0 2rem 0;
-}
-hr {
-	border-style: solid;
-	border-width: .1rem 0 0 0;
-	border-color: whitesmoke;
-	margin: 4rem 0;
-}
-
-/* ==========================================================================
-   Lists
-   ========================================================================== */
-
-dt,
-dd {
-	line-height: 1.5;
-}
-dt {
-	font-weight: 700;
-}
-dt + dd {
-	margin-top: .5rem;
-}
-dd + dt {
-	margin-top: 1.5rem;
-}
-
-/* ==========================================================================
-   Code
-   ========================================================================== */
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace;
 	font-size: .9rem;
-	padding: .4rem .6rem;
 }
-code,
-kbd,
-samp {
-	background: rgba(0, 0, 0, .075);
-	border-radius: .2rem;
+a {
+	text-decoration: none;
+	color: #026300;
+	display: inline-block;
+	transition: .2s ease-in-out;
 }
-pre {
-	border: .1rem solid whitesmoke;
-	line-height: 1.5;
-	margin: 4rem 0;
-	overflow: auto;
-	padding: 3rem 2rem;
-	text-align: left;
+a:hover,
+a:focus,
+header.nonTop a:hover,
+header.nonTop a:focus {
+	color: #29ac07;
 }
-pre code {
+button {
 	background: transparent;
-	padding: 0;
+	cursor: pointer;
+	transition: .2s ease-in-out;
 }
-
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-
-table {
-	border: .1rem solid whitesmoke;
-	border-collapse: collapse;
-	border-spacing: 0;
-	empty-cells: show;
-	font-size: 1.6rem;
-	margin: 4rem 0;
-	max-width: 100%;
-	overflow: hidden;
-	width: 100%;
-}
-th,
-td {
-	border: .1rem solid whitesmoke;
-	line-height: 1.4;
-	margin: 0;
-	overflow: visible;
-	padding: .5em;
-}
-caption {
-	background: whitesmoke;
-	font-weight: 600;
-	padding: .5em;
-	text-align: center;
-}
-thead {
-	vertical-align: bottom;
-	white-space: nowrap;
-}
-th {
-	font-weight: 700;
+ul {
+	list-style-type: none;
 }
 
 /* ==========================================================================
@@ -184,118 +69,348 @@ th {
    ========================================================================== */
 
 header {
-	background: #fff;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	padding: 10px;
 	display: flex;
 	justify-content: space-between;
+	background-color: transparent;
+	transition: .1s ease-in-out;
+}
+header.nonTop {
 	box-shadow: 0px 4px 8px #969696;
 	-webkit-box-shadow: 0px 4px 8px #969696;
 	-moz-box-shadow: 0px 4px 8px #969696;
-	z-index: 10;
+	background-color: #fafafa;
 }
-header div.logo {
+header > a {
 	display: flex;
-	align-items: center;
+	align-content: center;
 }
-header div.logo a:nth-last-of-type(2) {
-	padding: 0;
-}
-header img {
+header > a > svg {
 	height: 50px;
 	width: 75px;
+	display: inline-block;
+	fill: #fafafa; /* when relative */
 }
-header div.logo p {
-	font-size: 1.3rem;
+header.nonTop > a > svg {
+	fill: black; /* when fixed */
+}
+header > a > p {
+	line-height: 2;
+	font-size: 1.5rem;
+	margin-left: 20px;
+	display: none; /* while mobile */
+	vertical-align: middle;
+	color: #fafafa; /* when relative */
+}
+header.nonTop > a > p {
+	color: black; /* when fixed */
+}
+header nav {
 	display: none; /* while mobile */
 }
-header ul {
-	list-style-type: none;
+header nav ul {
 	display: flex;
-	margin: 0;
 }
-header ul li {
-	margin: 0;
+header nav ul li a {
+	padding: 10px;
+	margin: 5px;
+	color: #9c9c9c;
 }
-header > nav {
-	height: 100%;
-	margin-right: 20px;
-	display: none; /* while mobile */
+header.nonTop nav ul li a {
+	color: #026300;
 }
-header .mobile svg {
+button svg {
 	width: 50px;
 	height: 50px;
 }
-header div.mobile {
+header button svg {
+	fill: #fafafa;
+}
+header.nonTop button svg {
+	fill: black;
+}
+div.mobile {
 	position: fixed;
 	left: 0;
 	right: 0;
-	top: -100vh;
-	height: 100%;
-	padding: 20px;
-	background-color: white;
-	transition: .5s ease-in-out;
-}
-header div.mobile.clicked {
 	top: 0;
+	bottom: 0;
+	padding: 20px;
+	background-color: #fafafa;
+	z-index: -1;
 }
-header div.mobile button {
+div.mobile.clicked {
+	z-index: 1;
+}
+div.mobile button {
 	position: absolute;
-	right: 20px;
-	top: 20px;
+	right: 10px;
+	top: 10px;
 }
-header div.mobile button svg {
-	height: 40px;
-	width: 40px;
-}
-header div.mobile nav {
+div.mobile nav {
 	margin-top: 70px;
 }
-header div.mobile ul {
-	flex-direction: column;
-	font-size: 1.2rem;
-	margin-top: 30px;
-}
-header div.mobile ul li {
-	margin: 0;
+div.mobile ul li {
 	border-top: 1px solid;
 }
-header div.mobile ul li a {
+div.mobile ul li a {
 	width: 100%;
+	padding: 20px;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 
+footer {
+	margin: 30px 0 20px;
+}
 footer p {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
-footer p a {
-	margin: 0 5px;
-	padding: 0;
+footer a {
+	margin: 0 2px;
 }
 
 /* ==========================================================================
-   Error page
+   Page
    ========================================================================== */
 
-main.error a {
+main section {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: auto;
+}
+main > section:first-of-type {
+	background-image: url('./img/bg.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	min-height: 90vh;
+	color: #fafafa;
+	justify-content: center;
+	text-align: center;
+	padding-top: 50px;
+	max-width: unset;
+}
+main div.buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+main a.button.white {
+	color: black;
+	background-color: #fafafa;
+	border: 2px solid #fafafa;
+}
+main a.button.white:hover {
+	color: #fafafa;
+	background-color: transparent;
+}
+main a.button.bordered {
+	border: 2px solid #fafafa;
+	color: #fafafa;
+	background-color: transparent;
+}
+main a.button.bordered:hover {
+	color: black;
+	background-color: #fafafa;
+}
+main section h2 {
+	text-align: center;
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+main section h2.border-top {
+	width: 80%;
+	border-top: 2px solid;
+	margin-top: 50px;
+}
+main section div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+main section div article {
+	max-width: 400px;
+	margin: 20px;
+	text-align: justify;
+}
+main section div article h3 {
+	border-top: 1px solid;
+	margin: 0 20%;
+	text-align: center;
+	width: 100%;
+}
+i {
+	display: block;
+	margin: 20px auto;
+	height: 70px;
+}
+i.car {
+	content: url('./img/car.svg');
+}
+i.crane {
+	content: url('./img/crane.svg');
+}
+i.fb {
+	content: url('./img/fb.svg');
+}
+i.logo {
+	content: url('./img/logo.svg');
+}
+i.mail {
+	content: url('./img/mail.svg');
+}
+i.map {
+	content: url('./img/map.svg');
+}
+i.phone {
+	content: url('./img/phone.svg');
+}
+i.rular {
+	content: url('./img/rular.svg');
+}
+i.sale {
+	content: url('./img/sale.svg');
+}
+#kontakt i {
+	height: 50px;
+	margin: 10px;
+}
+#kontakt p {
+	margin-bottom: 10px;
+}
+#kontakt > div {
+	display: flex;
+	flex-wrap: wrap;
+}
+#kontakt > div > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	padding: 20px;
-	font-size: 1.5rem;
+}
+#kontakt > div > div:first-of-type p {
+	text-align: center;
+}
+input,
+textarea {
+	border: 1px solid transparent;
+	border-bottom: 1px solid #026300;
+	background-color: #fafafa;
+	max-width: 400px;
+	width: 100%;
+	font-size: 1.2rem;
+}
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+	border-radius: 6px;
+	border-color: #026300;
+	outline: none;
+}
+textarea {
+	min-width: 100px;
+	min-height: 100px;
+	height: 150px;
+}
+main a.button,
+.wpcf7-submit {
+	padding: 7px 16px;
+	border-radius: 6px;
+	align-self: center;
+	margin: 15px;
+	min-width: 150px;
+	text-align: center;
+}
+.wpcf7-submit {
+	color: #026300;
+	border: 2px solid #026300;
+	width: unset;
+	font-size: 1rem;
+}
+.wpcf7-submit:hover {
+	color: #fafafa;
+	background-color: #026300;
+}
+div.cars {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 30px;
+}
+div.cars section {
+	max-width: 350px;
+	margin: 10px;
+	padding: 20px;
+	border: 2px #9c9c9c solid;
+}
+div.cars h2 {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+div.cars img {
+	width: 240px;
+	height: 160px;
+	align-self: center;
+}
+div.cars h3 {
+	text-align: center;
+	margin-top: 30px;
+}
+div.cars table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+div.cars table tr:first-of-type,
+div.cars table tr:nth-of-type(3),
+div.cars table tr:nth-of-type(5) {
+	background-color: #cacaca;
+}
+div.cars table tr td {
+	border:  2px #9c9c9c solid;
+	padding: 3px;
+}
+div.cars table tr td:nth-of-type(2) {
+	text-align: center;
+}
+div.cars section p {
+	text-align: center;
+	margin-top: 30px;
+}
+div.cars a.button {
+	color: #026300;
+	border: 2px solid #026300;
+	width: unset;
+}
+div.cars a.button:hover {
+	color: #fafafa;
+	background-color: #026300;
 }
 
+/* ==========================================================================
+   Min-width: 800px 
+   ========================================================================== */
+
 @media only screen and (min-width: 800px) {
-	header div.logo p,
-	header > nav {
+	header nav {
 		display: unset;
 	}
-	.mobile {
+	header > a > p {
+		display: unset;
+	}
+	button svg {
 		display: none;
 	}
 }
