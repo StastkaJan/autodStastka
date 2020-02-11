@@ -1,9 +1,15 @@
 		<footer role="contentinfo">
 			<p>
 				<span>&copy; <?php echo date('Y'); ?>
-				<a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></span>
+				<a onclick="gtag('event', 'click', {
+                    'event_category': 'footer',
+                    'event_label': 'home'
+                   });" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></span>
 				<span><?php _e(' | By', 'jsweb'); ?>
-				<a href="<?php echo esc_url(__('https://jsweb.pslib.cloud','jsweb') ); ?>"><?php _e('Jan Šťástka', 'jsweb'); ?></a></span>
+				<a onclick="gtag('event', 'click', {
+                    'event_category': 'footer',
+                    'event_label': 'JSWeb'
+                   });" href="<?php echo esc_url(__('https://jsweb.pslib.cloud','jsweb') ); ?>"><?php _e('Jan Šťástka', 'jsweb'); ?></a></span>
 			</p>
 		</footer>
 
