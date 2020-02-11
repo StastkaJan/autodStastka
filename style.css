@@ -364,6 +364,9 @@ div.cars h3 {
 	text-align: center;
 	margin-top: 30px;
 }
+div.cars p {
+	text-align: center;
+}
 div.cars table {
 	border-collapse: collapse;
     border-spacing: 0;
@@ -379,9 +382,6 @@ div.cars table tr td {
 }
 div.cars table tr td:nth-of-type(2) {
 	text-align: center;
-}
-div.cars section p {
-	font-size: 1.2rem;
 }
 div.cars a.button {
 	color: #026300;
