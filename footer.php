@@ -1,4 +1,4 @@
-		<footer role="contentinfo">
+		<footer>
 			<p>
 				<span>&copy; <?php echo date('Y'); ?>
 				<a onclick="gtag('event', 'click', {

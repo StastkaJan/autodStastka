@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="error" role="main">
+<main class="error">
 
 	<section>
 

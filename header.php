@@ -20,11 +20,11 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body>
 
 		<?php wp_body_open(); ?>
 
-		<header role="banner">
+		<header>
 			<!-- logo and name -->
 			<a onclick="gtag('event', 'click', {
                     'event_category': 'header',
@@ -37,13 +37,13 @@
 			</a>
 			<!-- Menu -->
 			<!-- Open button -->
-			<button onclick="openMobileMenu()"; class="mobile">
+			<button onclick="openMobileMenu()" class="mobile">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512">
 					<path d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"/>
 				</svg>
 			</button>
 			<!-- Desktop menu -->
-			<nav role="navigation">
+			<nav>
 				<?php if (function_exists('header_menu')) {
 					 header_menu();
 				}; ?>	
@@ -52,13 +52,13 @@
 		<!-- Mobile menu wrapper structure -->
 		<div class="mobile">
 			<!-- Close button -->
-			<button onclick="closeMobileMenu()";>
+			<button onclick="closeMobileMenu()">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 320 512">
 					<path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
 				</svg>				
 			</button>
 			<!-- The real menu -->
-			<nav role="navigation">
+			<nav>
 				<?php if (function_exists('header_menu')) {
 					 header_menu();
 				}; ?>	
